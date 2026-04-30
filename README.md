@@ -1,4 +1,4 @@
-RF-Link-Budget-Calculator (系統鏈路預算自動化計算工具)<br>
+# RF-Link-Budget-Calculator (系統鏈路預算自動化計算工具)<br>
 這是一個基於 Python 開發的射頻系統級分析工具，旨在自動化計算接收機或發射機鏈路的關鍵性能指標。本工具透過數學建模方式，模擬訊號在經過多級射頻元件（如 LNA、混頻器、濾波器、功率放大器）時的增益、雜訊與線性度變化。<br>
 核心功能 (Core Features)<br>
 級聯指標計算：Friis 方程式：精確計算多級級聯雜訊指數 (Cascaded NF)。<br>
@@ -17,9 +17,8 @@ chain = [<br>
     RFStage("Mixer",    gain_db=-6, nf_db=7.0, oip3_db=15,  op1db_dbm=5),<br>
     RFStage("IF_Amp",   gain_db=20, nf_db=4.0, oip3_db=30,  op1db_dbm=18)<br>
 ]<br>
-
-# 執行分析 (設定頻寬為 1MHz)<br>
-results = calculate_link(chain, bandwidth_hz=1e6)<br>
+#執行分析 (設定頻寬為 1MHz)<br>
+```results = calculate_link(chain, bandwidth_hz=1e6)```<br>
 
 
 <img width="554" height="297" alt="image" src="https://github.com/user-attachments/assets/fc2ae8cf-a46f-47a0-b1ab-f4060032f6da" />
